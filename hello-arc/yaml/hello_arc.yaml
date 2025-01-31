@@ -17,7 +17,7 @@ metadata:
   name: hello-arc
   namespace: hello-arc
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: hello-arc
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: jumpstartprod.azurecr.io/hello-arc:latest
+        image: azurearcjumpstart.azurecr.io/hello-arc-gitops:latest
         ports:
         - containerPort: 8080
         env:
